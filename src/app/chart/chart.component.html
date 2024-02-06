@@ -1,0 +1,9 @@
+<span class="card-container" [id]="widgetId" (mouseover)="onResize()">
+    <div class="plotly-wrapper" [ngStyle]="customHeight && {'height': customHeight + 'px'}">
+        <div class="row m-0 g-0 ">
+            <div #plotlyWidthDiv class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                <plotly-plot [data]="_traces" [config]="config" [layout]="_layout"></plotly-plot>
+            </div>
+        </div>
+    </div>
+</span>

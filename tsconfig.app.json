@@ -9,6 +9,9 @@
     "src/main.ts"
   ],
   "include": [
-    "src/**/*.d.ts"
+    "src/**/*.d.ts",
+    "src/app/chart/chart.component.ts",
+    "src/app/trend-widget/trend-widget.component.ts",
+    "src/app/production-volume-trend/production-volume-trend.component.ts",
   ]
 }

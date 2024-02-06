@@ -1,0 +1,90 @@
+// .production-volume-trend-container {
+//     height: 512px;
+
+//     .ytd {
+//         color: var(--color-text-common-primary);
+//         font-family: var(--font-family-body-medium);
+//         font-size: var(--font-size-subtitle-medium);
+//         font-weight: var(--font-weight-body-medium);
+//         line-height: var(--font-line-height-subtitle-medium);
+//     }
+
+//     .error-dimensions,
+//     .spinner-dimensions {
+//         height: 425px;
+//         width: 100%;
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//     }
+
+//     .status-icon-dimension {
+//         display: inline-block;
+//         border-radius: 50%;
+//         width: 9px;
+//         height: 9px;
+//         margin-right: 9px;
+//     }
+
+//     .produced-icon {
+//         background: var(--color-fill-data-viz-comparison-primary);
+//     }
+
+//     .producing-icon {
+//         background: var(--color-fill-data-viz-comparison-secondary);
+//     }
+
+//     .target-missed-icon {
+//         background: var(--color-fill-data-viz-default-5);
+//     }
+
+//     .target-met-icon {
+//         background: var(--color-fill-data-viz-default-8);
+//     }
+
+//     .optimized-potential-icon {
+//         background: var(--color-fill-data-viz-default-7);
+//     }
+
+//     ::ng-deep .bh-menu__li {
+//         cursor: default !important;
+//         padding: 0px !important;
+//         margin-left: var(--spacing-padding-large);
+//         display: inline-flex;
+//         align-items: center;
+//         -webkit-user-select: none;
+//         -moz-user-select: none;
+//         -ms-user-select: none;
+//         user-select: none;
+//     }
+
+//     ::ng-deep .bh-menu__li-label {
+//         color: white;
+//     }
+
+//     ::ng-deep .bh-menu__ul :hover,
+//     ::ng-deep .bh-menu__li :hover {
+//         cursor: default !important;
+//         background-color: transparent !important;
+
+//         .produced-icon {
+//             background: var(--color-fill-data-viz-comparison-primary) !important;
+//         }
+
+//         .producing-icon {
+//             background: var(--color-fill-data-viz-comparison-secondary) !important;
+//         }
+
+//         .target-missed-icon {
+//             background: var(--color-fill-data-viz-default-5) !important;
+//         }
+
+//         .target-met-icon {
+//             background: var(--color-fill-data-viz-default-8) !important;
+//         }
+
+//         .optimized-potential-icon {
+//             background: var(--color-fill-data-viz-default-7) !important;
+//         }
+//     }
+// }

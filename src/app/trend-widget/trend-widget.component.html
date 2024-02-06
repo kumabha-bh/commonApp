@@ -1,0 +1,56 @@
+<div class="bh-card-trend-component production-volume-trend-container">
+    <div class="bh-card--header-trend-component">
+        <div class="bh-card--header-left-container-trend-component">
+            <span
+                class="bh-card--heading typography--subtitle-medium">{{productionVolumeTrendTitles?.productionVolumeTrendTitle}}</span>
+        </div>
+        <div class="bh-card--header-right-container-trend-component ytd">
+            {{productionVolumeTrendTitles?.YTD}}
+        </div>
+    </div>
+    <div class="bh-card--content-trend-component close with-header-actions-trend-component">
+        <div class="bh-card--contained-content">
+            <div>
+                <div class="loader spinner-dimensions" *ngIf="productionVolumeTrendIsLoading">
+                    <bh-spinner size="xlarge" position="inline"></bh-spinner>
+                </div>
+                <app-plotly-wrappers *ngIf="!noDataFound && !productionVolumeTrendIsLoading" class="col-11 pt-1"
+                id="productionVolTrend" [customHeight]="productionVolTrend.layout?.height"
+                [traces]="productionVolTrend.traces" [layout]="productionVolTrend.layout"
+                [config]="productionVolTrend.config"></app-plotly-wrappers>
+
+                <!-- <ng-container #volumeTrend *ngIf="!noDataFound && !productionVolumeTrendIsLoading"></ng-container> -->
+                <div *ngIf="!noDataFound && !productionVolumeTrendIsLoading" style="pointer-events: none;">
+                    <ul class="bh-menu__ul d-flex justify-content-center w-100"
+                        style="position: relative; bottom: 10px;">
+                        <li class="bh-menu__li typography--label-small actual">
+                            <img src="{{ circleSvgPath }}" class="status-icon-dimension produced-icon" [alt]="" />
+                            <span class="bh-menu__li-label">{{productionVolumeTrendTitles?.Produced}}</span>
+                        </li>
+
+                        <li class="bh-menu__li typography--label-small actual">
+                            <img src="{{ circleSvgPath }}" class="status-icon-dimension producing-icon" [alt]="" />
+                            <span class="bh-menu__li-label">{{productionVolumeTrendTitles?.Producing}}</span>
+                        </li>
+                        <li class="bh-menu__li typography--label-small recomended">
+                            <img src="{{ circleSvgPath }}" class="status-icon-dimension target-missed-icon" [alt]="" />
+                            <span class="bh-menu__li-label">{{productionVolumeTrendTitles?.TargetMissed}}</span>
+                        </li>
+                        <li class="bh-menu__li typography--label-small max-min">
+                            <img src="{{ circleSvgPath }}" class="status-icon-dimension target-met-icon" [alt]="" />
+                            <span class="bh-menu__li-label">{{productionVolumeTrendTitles?.TargetMet}}</span>
+                        </li>
+                        <li class="bh-menu__li typography--label-small max-min">
+                            <img src="{{ circleSvgPath }}" class="status-icon-dimension optimized-potential-icon"
+                                [alt]="" />
+                            <span class="bh-menu__li-label">{{productionVolumeTrendTitles?.OptimizedPotential}}</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div *ngIf="noDataFound && !productionVolumeTrendIsLoading" class="error-dimensions">
+                <!-- <app-error [errorObj]="errorObj" [retryApi]="'loadProductionVolumeTrendData'"></app-error> -->
+            </div>
+        </div>
+    </div>
+</div>
