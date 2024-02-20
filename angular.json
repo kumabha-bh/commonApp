@@ -40,7 +40,7 @@
 							"plotly.js-basic-dist-min"
 						]
 					},
-					
+
 					"configurations": {
 						"production": {
 							"budgets": [
@@ -56,7 +56,7 @@
 								}
 							],
 							"outputHashing": "all",
-							"extraWebpackConfig": "webpack.prod.config.cjs"
+							"extraWebpackConfig": "webpack.prod.config.js"
 						},
 						"development": {
 							"buildOptimizer": false,
@@ -74,7 +74,7 @@
 					"configurations": {
 						"production": {
 							"browserTarget": "commonApp:build:production",
-							"extraWebpackConfig": "webpack.prod.config.cjs"
+							"extraWebpackConfig": "webpack.prod.config.js"
 						},
 						"development": {
 							"browserTarget": "commonApp:build:development"
@@ -84,14 +84,14 @@
 					"options": {
 						"port": 4201,
 						"publicHost": "http://localhost:4201",
-						"extraWebpackConfig": "webpack.config.cjs"
+						"extraWebpackConfig": "webpack.config.js"
 					}
 				},
 				"extract-i18n": {
 					"builder": "ngx-build-plus:extract-i18n",
 					"options": {
 						"browserTarget": "commonApp:build",
-						"extraWebpackConfig": "webpack.config.cjs"
+						"extraWebpackConfig": "webpack.config.js"
 					}
 				},
 				"test": {
