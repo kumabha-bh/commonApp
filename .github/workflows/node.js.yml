@@ -31,4 +31,4 @@ jobs:
         cache: 'npm'
  
     - name: Authenticate with private NPM package
-       - run: npm install
+    - run: npm install
