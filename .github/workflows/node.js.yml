@@ -29,5 +29,6 @@ jobs:
       uses: bduff9/use-npmrc@v1.2
       with:
         dot-npmrc: ${{ secrets.DOT_NPMRC }}
+      run:  echo '//npm.pkg.github.com/:_authToken=${{ secrets.NPM_TOKEN  }}' > ${{ github.workspace }}/.npmrc  
     - name: NPM Install
       run: npm i --legacy-peer-deps
