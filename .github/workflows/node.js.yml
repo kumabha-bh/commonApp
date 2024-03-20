@@ -26,8 +26,8 @@ jobs:
         registry-url: https://npm.pkg.github.com/
         scope: '@kumabha-bh'
     - name: Use .npmrc
-        uses: bduff9/use-npmrc@v1.2
-        with:
-          dot-npmrc: ${{ secrets.DOT_NPMRC }}
+      uses: bduff9/use-npmrc@v1.2
+      with:
+        dot-npmrc: ${{ secrets.DOT_NPMRC }}
     - name: NPM Install
     - run: npm i --legacy-peer-deps
