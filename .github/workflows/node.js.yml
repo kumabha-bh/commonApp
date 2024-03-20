@@ -30,4 +30,4 @@ jobs:
       with:
         dot-npmrc: ${{ secrets.DOT_NPMRC }}
     - name: NPM Install
-    - run: npm i --legacy-peer-deps
+      run: npm i --legacy-peer-deps
