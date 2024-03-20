@@ -27,11 +27,11 @@ jobs:
         scope: '@kumabha-bh'
     - run: |
           echo "@kumabha-bh:registry=https://npm.pkg.github.com/" >> .npmrc
-          echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" >> .npmrc
+          echo "//npm.pkg.github.com/:_authToken=${{ secrets.NPM_TOKEN }}" >> .npmrc
           echo "@bh-ent-tech:registry=https://npm.pkg.github.com/" >> .npmrc
           echo "@bh-digitalsolutions:registry=https://npm.pkg.github.com/" >> .npmrc
           echo "@angular:registry=https://registry.npmjs.org/" >> .npmrc
     - run: npm i --legacy-peer-deps
       env:
-        NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
      
