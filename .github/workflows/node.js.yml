@@ -2,6 +2,8 @@
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
 
 name: Node.js CI
+ env:
+      NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
 
 on:
   push:
@@ -13,8 +15,6 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-    env:
-      NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
     strategy:
       matrix:
         node-version: [18.x]
