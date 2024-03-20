@@ -25,7 +25,16 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - run: npm install -g @angular/cli@16.2.6
-    - run: ng test
-    - run: ng build --configuration production
+         env:
+          cache-name: cache-node-modules
+        with:
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+      - name: npm install and npm run CI commands
+        run: |
+          npm i
+          npm run test:ci
+          npm run build:ci
