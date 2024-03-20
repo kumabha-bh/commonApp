@@ -25,9 +25,10 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
-        registry-url: https://npm.pkg.github.com/:_authToken=${{secrets.NPM_TOKEN}}
+        registry-url: https://npm.pkg.github.com/
         scope: '@kumabha-bh'
-        secrets: inherit
+     - run: |
+          echo "@kumabha-bh:registry=https://npm.pkg.github.com" >> .npmrc
+          echo "//npm.pkg.github.com/:_authToken=${{ secrets.NPM_TOKEN }}" >> .npmrc
         cache: 'npm'
     - run: npm i
-      shell: bash
