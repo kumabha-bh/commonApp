@@ -25,11 +25,9 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
+        registry-url: http://npm.pkg.github.com/
         cache: 'npm'
- run: |
-    echo "//npm.pkg.github.com/:_authToken={{NPM_TOKEN}}
-     @bh-ent-tech:registry=https://npm.pkg.github.com/
-    @bh-digitalsolutions:registry=https://npm.pkg.github.com/
-    @angular:registry=https://registry.npmjs.org/" >> .npmrc
    - run: npm install
    - run: npm run test
+     env:
+        NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
