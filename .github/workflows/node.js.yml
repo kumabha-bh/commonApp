@@ -29,3 +29,5 @@ jobs:
         scope: '@kumabha-bh'
         cache: 'npm'
     - run: npm install
+    env: 
+    NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
