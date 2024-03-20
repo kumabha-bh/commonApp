@@ -28,6 +28,7 @@ jobs:
         registry-url: https://npm.pkg.github.com/
         scope: '@kumabha-bh'
         cache: 'npm'
-    - run: npm install
-    env: 
-    NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+ 
+    - name: Authenticate with private NPM package
+       - run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
+       - run: npm install
