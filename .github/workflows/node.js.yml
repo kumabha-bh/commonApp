@@ -30,6 +30,6 @@ jobs:
     - run: |
           echo "@kumabha-bh:registry=https://npm.pkg.github.com" >> .npmrc
           echo "//npm.pkg.github.com/:_authToken=${{ secrets.NPM_TOKEN }}" >> .npmrc
-    - run: npm i
+    - run: npm i --legacy-peer-deps
       env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
