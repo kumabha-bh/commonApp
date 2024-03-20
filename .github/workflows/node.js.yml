@@ -29,7 +29,10 @@ jobs:
         registry-url: https://npm.pkg.github.com/
         scope: '@kumabha-bh'
     - run: |
-          echo "@kumabha-bh:registry=https://npm.pkg.github.com" >> .npmrc
+          echo "@kumabha-bh:registry=https://npm.pkg.github.com/" >> .npmrc
           echo "//npm.pkg.github.com/:_authToken=${{ secrets.NPM_TOKEN }}" >> .npmrc
+          echo "@bh-ent-tech:registry=https://npm.pkg.github.com/" >> .npmrc"
+          echo "@bh-digitalsolutions:registry=https://npm.pkg.github.com/" >> .npmrc
+          echo "@angular:registry=https://registry.npmjs.org/" >> .npmrc
     - run: npm i --legacy-peer-deps
      
