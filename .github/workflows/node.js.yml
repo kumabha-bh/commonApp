@@ -26,6 +26,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         registry-url: http://npm.pkg.github.com/
+        scope: '@kuma-bha'
         cache: 'npm'
    - run: npm install
    - run: npm run test
